@@ -27,7 +27,7 @@
 						Web<span class="logo-header link">Studio</span>
 					</a>
 					<ul class="media-list list">
-						<li class="media-list-item"><a class="media-list-link link" href="./index.html">Студія</a></li>
+						<li class="media-list-item"><a class="media-list-link link current" href="./index.html">Студія</a></li>
 						<li class="media-list-item"><a class="media-list-link link" href="./portfolio.html">Портфоліо</a></li>
 						<li class="media-list-item"><a class="media-list-link link" href="">Контакти</a></li>
 					</ul>
@@ -62,7 +62,16 @@
 					<br />
 					вашого бізнесу
 				</h1>
-				<button class="modal-btn" type="button">Замовити послугу</button>
+				<button class="modal-btn" type="button" data-modal-open>Замовити послугу</button>
+				<div class="backdrop is-hidden" data-modal>
+					<div class="modal">
+						<button class="button-close" data-modal-close>
+							<svg class="vector" width="11" height="11">
+								<use href="./img/icons.svg#vector"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
 			</section>
 
 			<!--ABOUT-->
@@ -123,12 +132,21 @@
 					<ul class="functional-list-title">
 						<li class="functional-list-item">
 							<img class="functional-gallery-img" src="./img/box1.jpg" alt="scheme" width="370" height="294" />
+							<div class="functional-overlay">
+								<p class="text-overlay">ДЕСКТОПНІ ДОДАТКИ</p>
+							</div>
 						</li>
 						<li class="functional-list-item">
 							<img class="functional-gallery-img" src="./img/box2.jpg" alt="smartphone" width="370" height="294" />
+							<div class="functional-overlay">
+								<p class="text-overlay">МОБІЛЬНІ ДОДАТКИ</p>
+							</div>
 						</li>
 						<li class="functional-list-item">
 							<img class="functional-gallery-img" src="./img/box3.jpg" alt="color_palette" width="370" height="294" />
+							<div class="functional-overlay">
+								<p class="text-overlay">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -557,5 +575,6 @@
 				</address>
 			</div>
 		</footer>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
